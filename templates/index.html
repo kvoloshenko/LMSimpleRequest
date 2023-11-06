@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generating a post in Telegram</title>
+<!--    подключение css-->
+    <link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css" >
+
+</head>
+<body class="p-3 mb-2 bg-light text-dark">
+    <div class="container">
+        <h1>Генерация поста в Телеграм</h1>
+        <form action="index.html" method="post">
+            <input type="text" name="query_string" value="" placeholder="строка ввода" class="form-control">
+            <br><br>
+            <p>
+                <input type="submit" value="Сгенерировать" class="btn btn-secondary">
+            </p>
+        </form>
+        <hr>
+        {% if lm_blog %}
+        <br><br>
+        <h1>LM Studio: Результаты запроса</h1>
+        <h3>Blog Post</h3>
+        <pre class="text-break">{{lm_blog}}</pre>
+        <br><br>
+        {% endif %}
+
+    </div>
+</body>
+</html>
